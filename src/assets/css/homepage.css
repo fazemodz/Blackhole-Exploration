@@ -1,26 +1,121 @@
-.Homepage-container{
-    height: 100vh;
-    width: 100vw;
-    background-color: #000000;
+.index{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("http://www.nasa.gov/sites/default/files/thumbnails/image/simulated_bh.jpg");
 }
-.Homepage-container{
-    height: 100vh;
-    width: 100vw;
+.section {
+  color: #ffffff;
+  font-family: "Nanum Gothic", Dotum, sans-serif;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: rgba(17, 17, 17, 0.84);
 }
-.Homepage-Video{
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+.section.video-background{
+  padding: 0px;
+}
+/*Sets up the columns*/
+html {
+  font-size: 25px;
+}
+/*Adds a row*/
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.section:nth-child(odd) {
+  background-color: rgba(17, 17, 17, 0.84);
+}
+.column {
+  width: 50%;
+  padding: 0px;
+  min-height: 400px;
+  flex-direction: column;
+  font-family: "Noto Serif JP", serif;
+}
+p {
+  font-size: 25px;
+}
+/* just for Tomdotbat */
+body {
+  margin: 0;
+}
+p2 {
+  font-size: 25px;
+  font-family: "Noto Serif JP", serif;
+}
+.title2 {
+  text-align: left;
+  font-family: "Noto Serif JP", serif;
+}
+.HomepageTittle {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 4rem;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
 
+.pagecontent {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  text-align: center;
 }
-.Video-Dim{
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0,0,0,0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.Hompagetext {
+  font-size: 25px;
+  padding: 10px;
+}
+.header {
+  height: 100%;
+  width: 100%;
+
+  background-position: center !important;
+  background-size: cover !important;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+.header.main {
+  min-height: 100%;
+}
+.subtitle {
+  font-style: normal;
+
+  line-height: normal;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.header .subtitle {
+  font-size: 83px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.title {
+  /*font-family: ;*/
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.dim {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+ z-index: 20;
 }

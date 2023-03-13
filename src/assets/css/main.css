@@ -2,3 +2,7 @@
 :root{
     font-family: "Syncopate";
 }
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
