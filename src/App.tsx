@@ -11,7 +11,12 @@ function App() {
       <Routes>
         {/* {/* <Route path="*" element={<NotFound />} /> */}
         <Route path="/" element={<Homepage />} />
-        <Route path="/Intrested" element={<RegisterIntrest />} />
+        <Route path="/Register-Intrest" element={<RegisterIntrest />} />
+        {/* 
+          TODO: Add the other pages
+        */}
+        <Route path="/Days" element={<RegisterIntrest />} />
+        <Route path="/About" element={<RegisterIntrest />} />
         <Route path="/Our-end-Begins" element={<Ourend />} />
       </Routes>
     </>

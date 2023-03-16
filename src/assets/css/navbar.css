@@ -1,8 +1,54 @@
-.Navbar-container{
-    height: 100px;
-    width: 100vw;
-    background-color: #000;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+.Navbar-container {
+  width: 100dvw;
+  height: 80px;
+  /* background-color: #000; */
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  z-index: 9999;
+}
+.Navbar-section {
+  height: 100%;
+  width: 33.33333333%;
+  padding-top: 20px;
+  margin: 0%;
+}
+.logo {
+  padding-left: 20px;
+}
+.Logo-img {
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .Logo-img {
+    animation: logo-spin infinite 10s linear;
+  }
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.Links{
+  text-align: center;
+}
+.Links a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: underline;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  background-size: 0% 2px;
+  transition: background-size .4s ease, color 0.2s ease-in-out;
+}
+.Links a:hover {
+  background-position: 0.85em calc(100% - 0.25em);
+  background-size: calc(100% - 1.7em) 2px;
+  color: #8159ff;
 }
