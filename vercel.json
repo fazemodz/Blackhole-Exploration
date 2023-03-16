@@ -1,7 +1,9 @@
 {
     "routes":[
         { "src": "/", "dest": "/" },
-        { "src": "/Intrested", "dest": "/" },
+        { "src": "/Register-Intrest", "dest": "/" },
+        { "src": "/Days", "dest": "/" },
+        { "src": "/About", "dest": "/" },
         { "src": "/Our-end-Begins", "dest": "/" }
 
     ]
