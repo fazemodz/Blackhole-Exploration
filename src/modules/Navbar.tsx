@@ -1,6 +1,5 @@
 import React from 'react'
 import '../assets/css/navbar.css'
-import HamburgerIcon from '../assets/images/3388823.png'
 import Logo from '../assets/images/Logo.png'
 export default function Navbar() {
 
