@@ -1,62 +1,72 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from 'react';
+import axios from 'axios';
+import '../assets/css/registerintrest.css';
+interface FormData {
+  name: string;
+  email: string;
+}
 
-interface RegisterFormProps {}
+const RegisterInterest: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+  });
 
-const RegisterForm: React.FC<RegisterFormProps> = () => {
-  const [firstName, setFirstName] = useState<string>("");
-  const [lastName, setLastName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>('');
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-    console.log("First Name: ", firstName);
-    console.log("Last Name: ", lastName);
-    console.log("Email: ", email);
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+    e.preventDefault();
 
-    // Do something with the data...
+    try {
+      const response = await axios.post('https://your-api-endpoint', formData);
+      if (response.status === 200) {
+        setMessage('Thank you for registering your interest!');
+      } else {
+        setMessage('An error occurred. Please try again later.');
+      }
+    } catch (error) {
+      setMessage('An error occurred. Please try again later.');
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h3>Register Your Interest</h3>
-
-      <div>
-        <label htmlFor="firstName">First Name:</label>
-        <input
-          type="text"
-          id="firstName"
-          value={firstName}
-          onChange={(event) => setFirstName(event.target.value)}
-          required
-        />
-      </div>
-
-      <div>
-        <label htmlFor="lastName">Last Name:</label>
-        <input
-          type="text"
-          id="lastName"
-          value={lastName}
-          onChange={(event) => setLastName(event.target.value)}
-          required
-        />
-      </div>
-
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          required
-        />
-      </div>
-
-      <button type="submit">Register</button>
-    </form>
+    <div className="register-interest">
+      <h2>Register your interest</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      {message && <p>{message}</p>}
+    </div>
   );
 };
 
-export default RegisterForm;
+export default RegisterInterest;

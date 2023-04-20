@@ -1,0 +1,58 @@
+.register-interest {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .register-interest h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .register-interest form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .register-interest form div {
+    margin-bottom: 15px;
+  }
+  
+  .register-interest label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .register-interest input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .register-interest button {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .register-interest button:hover {
+    background-color: #2980b9;
+  }
+  
+  .register-interest p {
+    margin-top: 20px;
+    text-align: center;
+    color: #2c3e50;
+  }
+  
