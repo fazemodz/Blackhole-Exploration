@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import Navbar from './Components/navbar'
-import Homepage from './Components/Homepage'
-import Schedule from './Components/Schedule'
-import Venue from './Components/Venue'
-import NotFound from './Components/404';
-import Contact from './Components/Contact';
+import Navbar from './Components/navbar.jsx'
+import Homepage from './Components/Homepage.jsx'
+import Schedule from './Components/Schedule.jsx'
+import Venue from './Components/Venue.jsx'
+import NotFound from './Components/404.jsx';
+import Contact from './Components/Contact.jsx';
 function App() {
   const [ComponentToRender, setComponentToRender] = useState()
   useEffect(() => {

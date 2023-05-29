@@ -6,7 +6,7 @@ export default function Navbar() {
         let URL = FullURL.replace('http://localhost:5173/', '')
         setCurentPageURL(URL)
         console.log(CurentPageURL)
-    }, [])
+    }, [CurentPageURL])
     return (
         <>
             {/* ========== Header ========== */}
