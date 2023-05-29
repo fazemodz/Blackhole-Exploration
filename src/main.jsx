@@ -14,7 +14,5 @@ import './assets/js/swiper-bundle.min.js';
 import './assets/js/main.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <App />
-  </React.StrictMode>,
 )
