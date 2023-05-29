@@ -8,13 +8,27 @@ import Contact from './Components/Contact.jsx';
 function App() {
   const [ComponentToRender, setComponentToRender] = useState()
   useEffect(() => {
-    let FullURL = window.location.href
-    let smallURL = ''
-    if (FullURL.includes('http://localhost:5173/')) {
-       smallURL = FullURL.replace('http://localhost:5173/', '')
-    } else {
-       smallURL = FullURL.replace('http://192.168.0.164:5173/', '')
+    let FullURL = window.location.href;
+    let smallURL = '';
+    
+    switch (true) {
+      case FullURL.includes('http://localhost:5173/'):
+        smallURL = FullURL.replace('http://localhost:5173/', '');
+        break;
+      case FullURL.includes('http://192.168.0.164:5173/'):
+        smallURL = FullURL.replace('http://192.168.0.164:5173/', '');
+        break;
+      case FullURL.includes('https://blackhole-exploration.vercel.app/'):
+        smallURL = FullURL.replace('https://blackhole-exploration.vercel.app/', '');
+        break;
+      case FullURL.includes('https://blackhole-exploration.projectredacted.org'):
+        smallURL = FullURL.replace('https://blackhole-exploration.projectredacted.org', '');
+        break;
+      default:
+        smallURL = FullURL;
+        break;
     }
+    
     switch (smallURL) {
       case '':
         setComponentToRender('Homepage')
