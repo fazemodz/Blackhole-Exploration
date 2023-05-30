@@ -22,8 +22,8 @@ function App() {
       case FullURL.includes('https://blackhole-exploration.vercel.app/'):
         smallURL = FullURL.replace('https://blackhole-exploration.vercel.app/', '');
         break;
-      case FullURL.includes('https://blackhole-exploration.projectredacted.org'):
-        smallURL = FullURL.replace('https://blackhole-exploration.projectredacted.org', '');
+      case FullURL.includes('https://blackhole-exploration.projectredacted.org/'):
+        smallURL = FullURL.replace('https://blackhole-exploration.projectredacted.org/', '');
         break;
       default:
         smallURL = FullURL;
