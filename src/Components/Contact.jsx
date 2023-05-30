@@ -92,7 +92,7 @@ export default function Contact() {
 
                         <div className="section-header">
                             <h2>Contact Us</h2>
-                            <p>Nihil officia ut sint molestiae tenetur.</p>
+                            <p>For any queries, please contact us using the form below.</p>
                         </div>
 
                         <div className="row contact-info">
@@ -101,7 +101,7 @@ export default function Contact() {
                                 <div className="contact-address">
                                     <i className="bi bi-geo-alt"></i>
                                     <h3>Address</h3>
-                                    <address>A108 Adam Street, NY 535022, USA</address>
+                                    <address>Kwangya, Beyond the FLAT</address>
                                 </div>
                             </div>
 
@@ -109,7 +109,7 @@ export default function Contact() {
                                 <div className="contact-phone">
                                     <i className="bi bi-phone"></i>
                                     <h3>Phone Number</h3>
-                                    <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+                                    <p><a href="">N/A</a></p>
                                 </div>
                             </div>
 
@@ -117,14 +117,14 @@ export default function Contact() {
                                 <div className="contact-email">
                                     <i className="bi bi-envelope"></i>
                                     <h3>Email</h3>
-                                    <p><a href="mailto:info@example.com">info@example.com</a></p>
+                                    <p><a href="">N/A</a></p>
                                 </div>
                             </div>
 
                         </div>
 
                         <div className="form">
-                            <form action="forms/contact.php" method="post" role="form" className="php-email-form">
+                            <form >
                                 <div className="row">
                                     <div className="form-group col-md-6">
                                         <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required />

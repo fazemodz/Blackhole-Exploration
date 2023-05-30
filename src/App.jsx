@@ -5,6 +5,7 @@ import Schedule from './Components/Schedule.jsx'
 import Venue from './Components/Venue.jsx'
 import NotFound from './Components/404.jsx';
 import Contact from './Components/Contact.jsx';
+import Buytickets from './Components/Buy-tickets.jsx';
 function App() {
   const [ComponentToRender, setComponentToRender] = useState()
   useEffect(() => {
@@ -42,6 +43,9 @@ function App() {
       case 'Contact':
         setComponentToRender('Contact')
         break
+      case 'Buy-tickets':
+        setComponentToRender('Buytickets')
+        break
       default:
         setComponentToRender('NotFound')
         break
@@ -56,6 +60,7 @@ function App() {
       {ComponentToRender === 'Schedule' && <Schedule />}
       {ComponentToRender === 'Venue' && <Venue />}
       {ComponentToRender === 'Contact' && <Contact />}
+      {ComponentToRender === 'Buytickets' && <Buytickets />}
     </>
   )
 }
