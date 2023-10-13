@@ -5,6 +5,5 @@
         {"src": "/Venue" , "dest": "/"},
         {"src": "/Contact" , "dest": "/"},
         {"src": "/Buy-tickets" , "dest": "/"},
-        {"src": "/(.*)", "status" : 404, "dest": "/"}
     ]
 }
